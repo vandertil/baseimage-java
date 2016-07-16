@@ -17,8 +17,7 @@ RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup \
     && apt-get clean \
     && rm -rf /build \
     && rm -rf /tmp/* /var/tmp/* \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get remove -y x11-common
+    && rm -rf /var/lib/apt/lists/*
 
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
