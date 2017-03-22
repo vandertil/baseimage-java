@@ -13,7 +13,7 @@ RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup \
     && apt-get update -q \
     && apt-get upgrade -q -y \
     && echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections \
-    && apt-get install -q -y --no-install-recommends oracle-java8-installer ca-certificates apt-transport-https \
+    && apt-get install -q -y --no-install-recommends oracle-java8-installer oracle-java8-unlimited-jce-policy ca-certificates apt-transport-https \
     && apt-get clean \
     && rm -rf /build \
     && rm -rf /tmp/* /var/tmp/* \
